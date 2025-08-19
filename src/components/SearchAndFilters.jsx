@@ -12,7 +12,13 @@ const SearchAndFilters = ({
   types,
   favoriteCount 
 }) => {
+
   const searchInputRef = useRef(null);
+  const [localSearch, setLocalSearch] = useState(searchTerm);
+
+  useEffect(() => {
+    setLocalSearch(searchTerm);
+  }, [searchTerm]);
 
   useEffect(() => {
       const handleKeyDown = (e) => {
@@ -36,8 +42,11 @@ const SearchAndFilters = ({
                       ref={searchInputRef}
                       type="text"
                       placeholder="Search Pokémon... (Ctrl+K)"
-                      value={searchTerm}
-                      onChange={(e) => onSearchChange(e.target.value)}
+                      value={localSearch}
+                      onChange={(e) => {
+                        setLocalSearch(e.target.value); 
+                        onSearchChange(e.target.value);
+                      }}
                       className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                       aria-label="Search Pokémon"
                   />
