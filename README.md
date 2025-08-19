@@ -43,7 +43,7 @@ src/
 
 ### 1. Clone repo  
 ```bash
-git clone https://github.com/your-username/pokemon-explorer.git
+git clone https://github.com/anilprojects74/pokemon_explorer.git
 cd pokemon-explorer
 ```
 
@@ -58,17 +58,6 @@ npm run dev
 ```
 
 Open 👉 [http://localhost:5173](http://localhost:5173)  
-
----
-
-## 📸 Screenshots  
-> Add screenshots of your app here — e.g.  
-- List view with Pokémon grid  
-- Dark mode enabled  
-- Pokémon detail modal  
-- Favorites page  
-
----
 
 ## 🙌 Acknowledgments  
 - [PokéAPI](https://pokeapi.co) for Pokémon data  
