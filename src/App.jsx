@@ -20,8 +20,6 @@ const debounce = (func, delay) => {
   };
 };
 
-const capitalizeFirst = (str) => str.charAt(0).toUpperCase() + str.slice(1);
-
 const PokemonExplorer = () => {
   const [pokemon, setPokemon] = useState([]);
   const [loading, setLoading] = useState(true);

@@ -10,6 +10,8 @@ const PokemonDetail = ({ pokemonId, onClose, isFavorite, onToggleFavorite }) => 
   const [note, setNote] = useState('');
   const [notes, setNotes] = useLocalStorage('pokemon-notes', {});
 
+  const capitalizeFirst = (str) => str.charAt(0).toUpperCase() + str.slice(1);
+
   useEffect(() => {
       const fetchPokemon = async () => {
           try {
